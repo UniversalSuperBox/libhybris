@@ -21,7 +21,7 @@ LOCAL_C_INCLUDES := \
     frameworks/av/services/medialog \
     frameworks/av/services/camera/libcameraservice
 
-IS_ANDROID_5 := $(shell test $(ANDROID_VERSION_MAJOR) -eq 5 && echo true)
+IS_ANDROID_5 := $(shell test $(ANDROID_VERSION_MAJOR) -ge 5 && echo true)
 ifeq ($(IS_ANDROID_5),true)
 LOCAL_C_INCLUDES += system/media/camera/include
 endif
@@ -92,7 +92,7 @@ LOCAL_C_INCLUDES := \
 	system/media/audio_utils/include \
 	frameworks/av/services/camera/libcameraservice
 
-IS_ANDROID_5 := $(shell test $(ANDROID_VERSION_MAJOR) -eq 5 && echo true)
+IS_ANDROID_5 := $(shell test $(ANDROID_VERSION_MAJOR) -ge 5 && echo true)
 ifeq ($(IS_ANDROID_5),true)
 LOCAL_C_INCLUDES += frameworks/native/include/media/openmax
 endif
