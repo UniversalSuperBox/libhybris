@@ -21,6 +21,8 @@ LOCAL_SHARED_LIBRARIES := \
 	libui \
 	libgui
 
+LOCAL_32_BIT_ONLY := true
+
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -54,5 +56,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libgui \
 	libEGL \
 	libGLESv2
+
+LOCAL_32_BIT_ONLY := true
 
 include $(BUILD_EXECUTABLE)
