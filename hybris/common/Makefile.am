@@ -28,6 +28,7 @@ libhybris_common_la_SOURCES = \
 	hooks.c \
 	hooks_shm.c \
 	strlcpy.c \
+	strlcat.c \
 	dlfcn.c \
 	logging.c \
 	sysconf.c
