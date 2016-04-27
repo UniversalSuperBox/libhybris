@@ -1,4 +1,4 @@
-libhybris (0.1.0+git20151016+6d424c9-0ubuntu11~mmlinker1) vivid; urgency=medium
+libhybris (0.1.0+git20151016+6d424c9-0ubuntu11~mmlinker3) vivid; urgency=medium
 
   * hybris: introduce experimental configuration feature
   * hybris: note used android version in configure summary
