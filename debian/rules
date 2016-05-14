@@ -84,13 +84,19 @@ ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), armhf))
 		--enable-arch=arm \
 		--with-android-headers=/usr/include/android \
 		--enable-mali-quirks \
-		--enable-property-cache
+		--enable-property-cache \
+		--enable-debug \
+		--enable-trace \
+		--enable-experimental
 else
 	dh_auto_configure --sourcedirectory=hybris -- \
 		--enable-wayland \
 		--enable-arch=x86 \
 		--with-android-headers=/usr/include/android \
-		--enable-property-cache
+		--enable-property-cache \
+		--enable-debug \
+		--enable-trace \
+		--enable-experimental
 endif
 
 override_dh_install:

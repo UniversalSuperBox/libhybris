@@ -90,8 +90,9 @@ extern FILE *hybris_logging_target;
               pthread_mutex_lock(&hybris_logging_mutex); \
               if (hybris_logging_format() == HYBRIS_LOG_FORMAT_NORMAL) \
               { \
-                fprintf(hybris_logging_target, "%s %s:%d (%s) %s: " message "\n", \
+                fprintf(hybris_logging_target, "%s %s:%d (%s) (Thread %p) %s: " message "\n", \
                        module, __FILE__, __LINE__, __PRETTY_FUNCTION__, \
+                       hybris_get_thread_id(), \
                        #level + 11 /* + 11 = strip leading "HYBRIS_LOG_" */, \
                        ##__VA_ARGS__); \
                 fflush(hybris_logging_target); \

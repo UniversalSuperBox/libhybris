@@ -1,3 +1,45 @@
+libhybris (0.1.0+git20151016+6d424c9-0ubuntu11~mmlinker7) vivid; urgency=medium
+
+  * Add external symbol hooking support
+
+ -- Simon Fels <simon.fels@canonical.com>  Fri, 06 May 2016 14:44:44 +0200
+
+libhybris (0.1.0+git20151016+6d424c9-0ubuntu11~mmlinker6) vivid; urgency=medium
+
+  * hybris: introduce experimental configuration feature
+  * hybris: note used android version in configure summary
+  * hybris: common: import marshmallow linker
+  * hybris: common: enable building marshmellow linker
+  * hybris: common: make marshmellow linker building
+  * hybris: common: mm: drop support for libs inside zip archives
+  * hybris: common: mm: get rid of sys/limits.h copy
+  * hybris: common: mm: disable tls initialization
+  * hybris: common: mm: disable debuggerd connection
+  * hybris: common: mm: export android_* dlfcn functions for use from C
+  * hybris: common: add hybris prefix for our hook processing method
+  * hybris: common: mm: add symbol hooking functionality
+  * hybris: common: mm: redirect all linker logs to stdout
+  * hybris: common: mm: use HYBRIS_LD_DEBUG to enable debug output
+  * hybris: common: mm: get linker building on arm platforms
+  * hybris: common: build with c++ support
+  * hybris: common: mm: further enablement work
+  * hybris: common: mm: don't memset class instance
+  * hybris: common: mm: disable linker internal memory mgmt for small objects
+  * hybris: common: mm: respect hybris specific library paths only
+  * hybris: common: mm: replace LINKER_DEBUG with TRACE_DEBUG
+  * hybris: mention experimental configure option in summary
+  * hybris: common: add missing libs we have to link to
+  * hybris: common: mm: switch from fprintf to DEBUG
+  * hybris: common: mm: disable some more code parts we don't use
+
+ -- Simon Fels <simon.fels@canonical.com>  Wed, 27 Apr 2016 14:14:21 +0200
+
+libhybris (0.1.0+git20151016+6d424c9-0ubuntu10) xenial; urgency=medium
+
+  * debian: add missing hybris/common include directory
+
+ -- Simon Fels <simon.fels@canonical.com>  Thu, 21 Apr 2016 11:06:48 +0200
+
 libhybris (0.1.0+git20151016+6d424c9-0ubuntu9) xenial; urgency=medium
 
   * hybris/compat: media: wrap android media codec source implementation
