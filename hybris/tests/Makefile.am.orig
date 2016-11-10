@@ -1,5 +1,4 @@
 bin_PROGRAMS = \
-	test_audio \
 	test_egl \
 	test_egl_configs \
 	test_glesv2 \
@@ -41,10 +40,7 @@ endif
 endif
 endif
 
-<<<<<<< HEAD
-=======
 bin_PROGRAMS += test_audio
->>>>>>> d4741e6675582c248228a41f4c1616fbf39fd3e6
 test_audio_SOURCES = test_audio.c
 test_audio_CFLAGS = \
 	-I$(top_srcdir)/include \
@@ -202,6 +198,8 @@ test_nfc_SOURCES = test_nfc.c
 test_nfc_CFLAGS = \
 	-I$(top_srcdir)/include \
 	$(ANDROID_HEADERS_CFLAGS)
+
+test_nfc_LDFLAGS =
 test_nfc_LDADD = \
 	$(top_builddir)/common/libhybris-common.la \
 	$(top_builddir)/libnfc_nxp/libnfc_nxp.la \
