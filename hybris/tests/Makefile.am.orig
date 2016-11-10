@@ -1,13 +1,15 @@
 bin_PROGRAMS = \
+	test_audio \
 	test_egl \
 	test_egl_configs \
 	test_glesv2 \
-	test_ui \
-	test_sf \
 	test_sensors \
+<<<<<<< HEAD
 	test_input \
 	test_lights \
 	test_camera \
+=======
+>>>>>>> d4741e6675582c248228a41f4c1616fbf39fd3e6
 	test_vibrator \
 	test_media \
 	test_recorder \
@@ -39,7 +41,10 @@ endif
 endif
 endif
 
+<<<<<<< HEAD
+=======
 bin_PROGRAMS += test_audio
+>>>>>>> d4741e6675582c248228a41f4c1616fbf39fd3e6
 test_audio_SOURCES = test_audio.c
 test_audio_CFLAGS = \
 	-I$(top_srcdir)/include \
@@ -121,6 +126,7 @@ test_lights_LDADD = \
 	$(top_builddir)/common/libhybris-common.la \
 	$(top_builddir)/hardware/libhardware.la
 
+<<<<<<< HEAD
 test_ui_SOURCES = test_ui.c
 test_ui_CFLAGS = \
 	-I$(top_srcdir)/include \
@@ -181,17 +187,12 @@ test_recorder_LDADD = \
 	$(top_builddir)/input/libis.la \
 	$(top_builddir)/sf/libsf.la
 
+=======
+>>>>>>> d4741e6675582c248228a41f4c1616fbf39fd3e6
 test_gps_SOURCES = test_gps.c
 test_gps_CFLAGS = -pthread \
 	-I$(top_srcdir)/include \
 	$(ANDROID_HEADERS_CFLAGS)
-
-if HAS_ANDROID_4_2_0
-test_gps_CFLAGS += -DHAS_ANDROID_4_2_0
-endif
-if HAS_ANDROID_5_0_0
-test_gps_CFLAGS += -DHAS_ANDROID_5_0_0
-endif
 test_gps_LDFLAGS = -pthread
 test_gps_LDADD =  \
 	$(top_builddir)/common/libhybris-common.la \
@@ -201,8 +202,6 @@ test_nfc_SOURCES = test_nfc.c
 test_nfc_CFLAGS = \
 	-I$(top_srcdir)/include \
 	$(ANDROID_HEADERS_CFLAGS)
-
-test_nfc_LDFLAGS =
 test_nfc_LDADD = \
 	$(top_builddir)/common/libhybris-common.la \
 	$(top_builddir)/libnfc_nxp/libnfc_nxp.la \

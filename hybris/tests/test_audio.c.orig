@@ -72,13 +72,17 @@ int main(int argc, char **argv)
 	} while(0);
 
 	assert(audiohw->init_check(audiohw) == 0);
-	printf("Audio Hardware Interface initialized.\n");
+	fprintf(stdout, "Audio Hardware Interface initialized.\n");
 
+<<<<<<< HEAD
 	/* Check volume function calls */
+=======
+#if (ANDROID_VERSION_MAJOR == 4 && ANDROID_VERSION_MINOR >= 1) || (ANDROID_VERSION_MAJOR >= 5)
+>>>>>>> d4741e6675582c248228a41f4c1616fbf39fd3e6
 	if (audiohw->get_master_volume) {
 		float volume;
 		audiohw->get_master_volume(audiohw, &volume);
-		printf("Master Volume: %f\n", volume);
+		fprintf(stdout, "Master Volume: %f\n", volume);
 	}
 #endif
 
@@ -86,8 +90,9 @@ int main(int argc, char **argv)
 	if (audiohw->get_master_mute) {
 		bool mute;
 		audiohw->get_master_mute(audiohw, &mute);
-		printf("Master Mute: %d\n", mute);
+		fprintf(stdout, "Master Mute: %d\n", mute);
 	}
+#endif
 
 	/* Check output and input streams */
 	struct audio_config config_out = {
